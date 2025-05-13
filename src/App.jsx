@@ -206,13 +206,13 @@ export default function CountryGenreQuiz() {
           </div>
         </div>
       ) : (
-        {result && (
+        result ? (
         <div className="mt-6 text-center">
           <img src={result.image} alt="Genre" className="mx-auto rounded-xl mb-4 w-full max-w-xs" />
           <h2 className="text-2xl font-bold mb-2">{result.title}</h2>
           <p className="text-base text-gray-700">{result.description}</p>
         </div>
-      )}
+      ) : null
       )}
     </div>
   );
